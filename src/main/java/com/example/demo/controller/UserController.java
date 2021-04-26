@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 
+import com.example.demo.domain.User;
 import com.example.demo.service.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +18,7 @@ public class UserController {
     }
 
     @GetMapping("/list")
-    public  Iterable<Users> list() {
+    public Iterable<User> list() {
         return userService.list();
     }
 
